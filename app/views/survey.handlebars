@@ -1,0 +1,11 @@
+<form id="survey" action="/api/evilsobs" method="POST">
+  Rate each statement on a scale of 1 (Strongly Disagree) to 5 (Strongly Agree):<br /><br />
+{{#each questions}}
+  <input type="number" name="q{{@index}}" min="1" max="5">
+  <label for="q{{@index}}">{{question}}</label>
+  <br />
+{{/each}}
+  <br />
+  <input type="submit" value="Submit"></input>
+</form>
+<script src="/survey.js"></script>
